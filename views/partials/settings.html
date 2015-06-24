@@ -1,0 +1,59 @@
+<div class="animated slideInUp">
+	<div style="margin-top:100px;" class="row">
+		<div class="col-md-offset-1 col-md-11">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="panel panel-success">
+					  <div class="panel-heading">
+					    <h3 style="font-size: 20px" class="panel-title text-center">Settings &nbsp;<i class="fa fa-cog"></i></h3>
+					  </div>
+					  <div class="panel-body">
+					    <div class="row">
+					    	<div class="col-md-12">
+					    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					    	</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md-7">
+					<div class="panel panel-success">
+					  <div class="panel-heading">
+					    <h3 style="font-size: 20px" class="panel-title text-center">Party History &nbsp;<i class="fa fa-history"></i></h3>
+					  </div>
+					  <div class="panel-body">
+					    <div class="row">
+						    <div class="col-md-12">
+						    	<table class="table table-striped table-hover">
+						    	  <thead>
+						    	    <tr class="text-center">
+						    	      <th>#</th>
+						    	      <th>Date</th>
+						    	      <th>Party Pic</th>
+						    	      <th>Party Name</th>
+						    	      <th></th>
+						    	    </tr>
+						    	  </thead>
+						    	  <tbody>
+						    	    <tr ng-repeat="part in party">
+						    	      <td style="vertical-align: middle;">{{$index + 1}}</td>
+						    	      <td style="vertical-align: middle;">{{part.date | date:'MM/dd/yyyy'}}</td>
+						    	      <td style="vertical-align: middle;" class="thunmbnail"><img width="150px" class="img-rounded img-responsive" src="{{part.image}}"></td>
+						    	      <td style="vertical-align: middle;">{{part.eventtag}}</td>
+						    	      <td style="vertical-align: middle;" class="removeChat">
+						    	      	<a href="#"><span style="font-size:12px" class="label label-default">Review Party</span></a>
+						    	      </td>
+						    	    </tr>
+						    	  </tbody>
+						    	</table> 
+						    </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

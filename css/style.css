@@ -1,0 +1,92 @@
+h1 {
+	padding-bottom: 10px;
+}
+
+.sideNav {
+	min-width: 150px;
+	height: 2000px;
+	min-height: 100%;
+	padding-top: 0px;
+	background-color: #2196F3;
+	position: absolute;
+	color: white !important;
+}
+.sideNav a {
+	color: white;
+	width: 150px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.sideNav a:hover, 
+.sideNav a:focus {
+	background-color: #6EB9F5 !important;
+}
+
+body > nav {
+	margin-bottom: 0px !important;
+	border-radius: 0px;
+}
+
+.navbar.navbar-inverse {
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+
+
+
+.partyDetails {
+	padding: 20px;
+}
+
+.partyContentDetails {
+	border: 5px solid #ff9800 !important;
+	background: #ff9800 !important;
+	padding: 30px;
+	border-radius: 10px;
+	padding-top: 10px;
+	color: white;
+	font-size: 14px;
+}
+
+.partyContentDetails h3 {
+	color: white !important;
+}
+
+.dashEvents {
+	border: 5px solid #2196F3;
+}
+
+.removeChat a span:hover,
+.removeChat a span:focus {
+	text-decoration: none;
+	background-color: #2196f3 !important;
+	color: white !important;
+}
+
+.removeChat a span {
+	background-color: white;
+	color: #2196f3;
+	border: 1px solid #2196f3;
+	border-radius: 10px;
+}
+
+.joinTheParty {
+	background-color: white;
+	color: #2196f3;
+	border: 2px solid #2196f3;
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+.joinTheParty:hover {
+	text-decoration: none;
+	background-color: #2196f3 !important;
+	border: 2px solid #2196f3 !important;
+	color: white !important;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}

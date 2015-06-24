@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chris Pena | letsPARTY?</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/paper/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<!-- AngularFire -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+</head>
+<body ng-app="partyApp">
+
+
+<div ng-controller="partyCtrl">
+	<!-- Navbar -->
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/dashboard">letsPARTY?</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Friends List</a></li>
+	        <li><a href="#">Sign Out</a></li>
+	        <li><a style="font-size:18px" href="/settings"><i class="fa fa-cog"></i></a></li>
+	      </ul>
+	      <form class="navbar-form navbar-right" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="search parties...">
+	        </div>
+	        <button ng-model="searchParties" type="submit" class="btn btn-default">Submit</button>
+	      </form>
+	    </div>
+	  </div>
+	</nav>
+	<!-- End Navbar -->
+
+	<div class="sideNav text-center">
+		<ul class="nav navbar-nav">
+		  <li><a href="/dashboard">Dashboard &nbsp;<i class="fa fa-tachometer"></i></a></li> <br />
+		  <li><a href="/create">Create Party &nbsp;<i class="fa fa-calendar"></i></a></li> <br />
+		  <li><a href="/party">Party List &nbsp;<i class="fa fa-beer"></i></a></li> <br />
+		  <li><a href="#">Invitations &nbsp;<i class="fa fa-envelope"></i></a></li> <br />
+		  <li><a href="#">My Parties &nbsp;<i class="fa fa-home"></i></a></li> <br />
+		  <li><a href="/settings">Settings <i class="fa fa-cog"></i></a></li>
+		</ul>
+	</div>
+
+	<!-- Ng-View --> 
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10">
+				<ng-view></ng-view>
+			</div>
+		</div>
+	</div>
+	<!-- End Ng-View -->
+</div
+
+	<!-- Javascript -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	<script src="js/ngRouter.js" type="text/javascript"></script>
+	<script src="js/angular-route.min.js"></script>
+
+
+</body>
+</html>

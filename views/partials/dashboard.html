@@ -1,0 +1,128 @@
+<div class="animated slideInUp">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-11">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="dashTitle">
+						<h1 class="text-center">letsPARTY? Dashboard</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+						  <div class="panel-heading">
+						    <h3 class="panel-title">Profile</h3>
+						  </div>
+						  <div class="panel-body">
+							  <div class="col-md-6">
+							  	<img class="img-responsive img-rounded" style="width: 150px; height: auto;" src="img/chris.jpg">
+							  	<a class="pull-left" href="/settings"><p>Edit Profile <i class="fa fa-cog"></i></p></a>
+							  </div>
+							  <div class="col-md-6">
+							  	<p>Chris Pena</p>
+							  	<p>Twitter: <a href="https://twitter.com/dmschris">@DmsChris</a></p>
+							  	<p>Parties Attended: {{party.length}}</p>
+							  	<p>Bio: I'm always looking for a good party.</p>
+							  </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div  style="margin-top:16px;" class="panel panel-warning">
+						  <div class="panel-heading">
+						    <h3 class="panel-title">letsPARTY? Chat</h3>
+						  </div>
+						  <div style="padding-bottom: 3px;" class="panel-body">
+						  	<div class="col-md-9">
+							    <a href="#">@Matthew (1)</a><br />
+							    <a href="#">@DanDo (4)</a><br />
+							    <a href="#">#Springbreak (124)</a><br />
+							    <a href="#">#4thOfJuly (304)</a><br />
+							    <a href="#">#Coachella (194)</a><br />
+						    </div>
+					      	<div class="col-md-3 hidden-sm">
+					      		<div class="pull-right removeChat">
+						    	    <a href="#"><span class="label label-default">leave chat</span></a><br />
+						    	    <a href="#"><span class="label label-default">leave chat</span></a><br />
+						    	    <a href="#"><span class="label label-default">leave chat</span></a><br />
+						    	    <a href="#"><span class="label label-default">leave chat</span></a><br />
+						    	    <a href="#"><span class="label label-default">leave chat</span></a>
+					    	    </div>
+					        </div>
+						    <div style="margin-top: 10px" class="col-md-12">
+						    	<p class="text-center"><a class="btn btn-warning btn-xs" href="#">Create Chat...</a></p>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<h4></h4>
+						<div class="panel panel-danger">
+						  <div class="panel-heading">
+						    <h2 class="panel-title">letsPARTY? Live</h2>
+						  </div>
+						  <div class="panel-body">
+						    Hey Player, we are still working on letPARTY? live. So keep calm and party on. Follow us on <a href="https://twitter.com/dmschris" target="_blank">Twitter<i class="fa fa-twitter"></i></a> or fork this project on <a href="#">GitHub <i class="fa fa-github"></i></a>.
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="row">
+						<div class="panel panel-success">
+						  <div class="panel-heading">
+						    <h3 class="panel-title text-center">letsPARTY?</h3>
+						  </div>
+						  <div class="panel-body">
+							  <div ng-repeat="part in party | filter:searchParties | limitTo:numLimit" class="col-md-4 animated fadeIn">
+							  	<div class="col-md-12 text-center">
+							  		<h6 class="text-center">{{part.eventtag}}</h6>
+							  		<img width="150px" class="center-block img-responsive img-rounded" src="{{part.image}}">
+							  		<p style="margin-bottom:0px; padding:0px;">When: {{part.date | date:'MM/dd/yyyy'}}</p>
+							  		<p><a style="padding: 0px; margin:0px; font-size: 10px;" href="/party/{{part.$id}}">join now</a></p>
+							  	</div>
+							  </div>
+							  <div style="padding-top: 26px" class="col-md-12">
+							  	  <div class="col-md-3">
+							  	  	<form class="navbar-form navbar-right" role="search">
+							  	  	  <div class="form-group">
+							  	  	    <input ng-model="searchParties.eventtag" type="text" class="form-control" placeholder="search parties...">
+							  	  	  </div>
+							  	  	</form>
+							  	  </div>
+								  <div class="col-md-6">
+								  	<p class="text-center">
+								  		<a style="margin-top: 10px" class="btn btn-success btn-sm" href="/create">Create party...</a>
+									</p>
+								  </div>
+								  <div class="col-md-3">
+									  <label style="padding:20px; padding-bottom: 0px; padding-top:0px" class="pull-right">Filter
+										  <select ng-model="numLimit" class="form-control" id="select">
+										    <option value="3">3</option>
+										    <option value="6">6</option>
+										    <option value="9">9</option>
+										    <option value="12">12</option>
+										    <option value="15">15</option>
+										    <option value="18">18</option>
+										    <option value="21">21</option>
+										  </select>
+									  </label>
+								  </div>
+							  </div>
+						  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="col-md-offset-3">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

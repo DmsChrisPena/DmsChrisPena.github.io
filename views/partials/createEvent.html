@@ -1,0 +1,92 @@
+<form style="margin-top: 20px" class="form-horizontal">
+  <fieldset>
+	<div class="animated slideInUp container center-block">
+		    <h2 class="text-center">Create a Party</h2>
+		    <div class="row">
+			    <div class="form-group">
+			      <label for="inputEvent" class="col-lg-offset-1 col-lg-2 control-label">Event Name</label>
+			      <div class="col-lg-6">
+			        <input type="text" class="form-control" id="inputEvent" placeholder="Enter Event Name...">
+			      </div>
+			    </div>
+		    </div>
+	        <div class="row">
+	    	    <div class="form-group">
+	    	      <label for="inputImage" class="col-lg-offset-1 col-lg-2 control-label">Image URL</label>
+	    	      <div class="col-lg-6">
+	    	        <input type="text" class="form-control" id="inputImage" placeholder="Image URL...">
+	    	      </div>
+	    	    </div>
+	        </div>
+
+	        <div class="row">
+	    	    <div class="form-group">
+	    	      <label for="inputDate" class="col-lg-offset-1 col-lg-2 control-label">Date</label>
+	    	      <div class="col-lg-6">
+	    	        <input type="date" class="form-control" id="inputDate">
+	    	      </div>
+	    	    </div>
+	        </div>
+
+            <div class="row">
+        	    <div class="form-group">
+        	      <label for="inputTime" class="col-lg-offset-1 col-lg-2 control-label">Time</label>
+        	      <div class="col-lg-6">
+        	        <input type="time" class="form-control" id="inputTime" placeholder="Enter Event Name...">
+        	      </div>
+        	    </div>
+            </div>
+
+            <div class="row">
+        	    <div class="form-group">
+	    	        <label for="inputCity" class="col-lg-offset-1 col-lg-2 control-label">City</label>
+	    	        <div class="col-lg-2">
+	    	          <input type="location" class="form-control" id="inputCity" placeholder="Enter City...">
+	    	        </div>
+        	      <label for="inputState" class="col-lg-1 control-label">State</label>
+        	      <div class="col-lg-3">
+	    	        <input type="location" class="form-control" id="inputState" placeholder="Enter State...">
+        	      </div>
+        	    </div>
+            </div>
+
+            <div class="row">
+        	    <div class="form-group">
+        	      <label for="inputZip" class="col-lg-offset-1 col-lg-2 control-label">Zip</label>
+        	      <div class="col-lg-2">
+	    	        <input type="location" class="form-control" id="inputZip" placeholder="Enter Zip...">
+        	      </div>
+	    	        <label for="inputAddress" class="col-lg-1 control-label">Address</label>
+	    	        <div class="col-lg-3">
+	    	          <input type="location" class="form-control" id="inputAddress" placeholder="Enter Address...">
+	    	        </div>
+        	    </div>
+            </div>
+
+
+            <div class="row">
+        	    <div class="form-group">
+        	      <label for="inputEmail" class="col-lg-offset-1 col-lg-2 control-label">Email</label>
+        	      <div class="col-lg-6">
+        	        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Email...">
+        	        <div class="checkbox">
+        	          <label>
+        	            <input type="checkbox">Email me invite
+        	          </label>
+        	        </div>
+        	      </div>
+        	    </div>
+            </div>
+            <div class="row">
+	            <div class="col-lg-offset-3 col-lg-6">
+	            	<a href="#" id="createEvent" class="btn btn-primary btn-lg btn-block">Create Event</a>
+	            <div class="col-lg-offset-3 col-lg-6">
+					<div ng-if="listenNewParty" style="margin-top: 20px" class="animated slideInLeft alert alert-dismissible alert-success text-center center-block">
+	            	  <button type="button" class="close" data-dismiss="alert">×</button>
+	            	  <p>Party Created!<br /> Start inviting your friends to <br /> <strong>{{ party[party.length - 1].eventtag }}</strong>!</p><a href="/party" class="btn btn-primary btn-xs">Invite Friends</a>
+	            	</div>
+	            </div>
+            </div>
+		</div>
+	</fieldset>
+</form>

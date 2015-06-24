@@ -1,0 +1,99 @@
+<!-- <div class="animated slideInUp">
+	<div class="row">
+		<div style="margin-top: 30px;" ng-repeat="part in party" class="col-md-offset-2 col-md-7 animated slideInUp partyDetails">
+			<div class="partyContentDetails">
+				<div class="row">
+					<div class="text-center col-md-12">
+						<h3>{{part.eventtag}}</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<img class="img-responsive img-rounded" width="300px" ng-src="{{part.image}}">
+					</div>
+					<div class="col-md-7">
+						<p>Date: {{part.date | date:'MM/dd/yyyy'}}</p>
+						<p>Time:  {{part.time | date:'HH:mm'}}</p>
+						<p>Where: {{part.address + ", " + part.city + ", " + part.state + " " + part.zip}}</p>
+						<p>Contact Info: <a href="mailto:{{part.email}}">{{part.email}}</a></p>
+						<a style="margin-left: 30px;"class="text-center center-block btn btn-success btn-md" href="#">Join the party!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="animated slideInUp">
+	<div style="margin-top: 50px;" class="row">
+		<div class="col-md-offset-1 col-md-10">
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8">
+						<div class="panel panel-primary">
+					  		<div class="panel-heading">
+					  		</div>
+					  		<div class="panel-body">
+						  		<form class="form-horizontal">
+						  		  <fieldset>
+						  		    <legend>Search Parties</legend>
+					  		    	    <div class="row">
+					  		    		    <div class="form-group">
+					  		    		      <label for="inputEvent" class="col-lg-offset-1 col-lg-2 control-label">Party Name</label>
+					  		    		      <div class="col-lg-6">
+					  		    		        <input ng-model="searchPartyName.eventtag" type="text" class="form-control" id="inputEvent" placeholder="Enter party name...">
+					  		    		      </div>
+					  		    		    </div>
+					  		    	    </div>
+					  		            <div class="row">
+					  		        	    <div class="form-group">
+					  		        	      <label for="inputImage" class="col-lg-offset-1 col-lg-2 control-label">Date</label>
+					  		        	      <div class="col-lg-6">
+					  		        	        <input type="date" class="form-control" id="inputImage">
+					  		        	      </div>
+					  		        	    </div>
+					  		            </div>
+		  		                        <div class="row">
+		  		                    	    <div class="form-group">
+		  		            	    	        <label for="inputCity" class="col-lg-offset-1 col-lg-2 control-label">City</label>
+		  		            	    	        <div class="col-lg-2">
+		  		            	    	          <input ng-model="searchCity.city" type="text" class="form-control" id="inputCity" placeholder="City">
+		  		            	    	        </div>
+		  		                    	      <label for="inputState" class="col-lg-1 control-label">State</label>
+		  		                    	      <div class="col-lg-3">
+		  		            	    	        <input ng-model="searchState.state" type="text" class="form-control" id="inputState" placeholder="State">
+		  		                    	      </div>
+		  		                    	    </div>
+		  		                        </div>
+						  		  </fieldset>
+						  		</form>
+					 	 	</div>
+						</div>
+					</div>
+			</div>
+			<div style="margin:0px; padding:0px" ng-repeat="part in party | filter:searchPartyName | filter:searchCity | filter:searchState" class="panel panel-warning col-md-offset-2 col-md-4 animated fadeIn">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">{{part.eventtag}}</h3>
+			  </div>
+
+			  <div style="padding:15px;" class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<img class="img-responsive img-rounded" width="300px" ng-src="{{part.image}}">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>Date: {{part.date | date:'MM/dd/yyyy'}}</p>
+						<p>Time:  {{part.time | date:'HH:mm'}}</p>
+						<p>Where: {{part.address + ", " + part.city + ", " + part.state + " " + part.zip}}</p>
+						<p>Contact Info: <a href="mailto:{{part.email}}">{{part.email}}</a></p>
+						<p>Event Info: American Apparel PBR plaid banh mi authentic sriracha. Normcore post-ironic McSweeney's, Wes Anderson tote bag umami forage Schlitz Truffaut bicycle rights single-origin coffee Neutra Kickstarter scenester.</p>
+						<a style="margin-left: 30px;"class="text-center center-block joinTheParty" href="#"><span>Join the party!</span></a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
