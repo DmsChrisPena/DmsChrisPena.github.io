@@ -2,27 +2,27 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 // Need to change these because it's in wrong directory
 	$routeProvider.when("/create", {
-						templateUrl:"views/partials/createEvent.html",
+						templateUrl:"http://dmschrispena.github.io/views/partials/createEvent.html",
 						controller: 'partyCtrl'
 						})
 				  	.when('/party', {
-						templateUrl:"views/partials/detailedEvents.html",
+						templateUrl:"http://dmschrispena.github.io/views/partials/detailedEvents.html",
 						controller: 'partyCtrl'
 						})
 				  	.when('/dashboard', {
-			  			templateUrl:"views/partials/dashboard.html",
+			  			templateUrl:"http://dmschrispena.github.io/views/partials/dashboard.html",
 			  			controller: 'partyCtrl'
 			  			})
 		  		  	.when('/invitations', {
-		  	  			templateUrl:"views/partials/invitations.html",
+		  	  			templateUrl:"http://dmschrispena.github.io/views/partials/invitations.html",
 		  	  			controller: 'partyCtrl'
 		  	  			})
   		  		  	.when('/myparties', {
-  		  	  			templateUrl:"views/partials/myParties.html",
+  		  	  			templateUrl:"http://dmschrispena.github.io/views/partials/myParties.html",
   		  	  			controller: 'partyCtrl'
   		  	  			})
   		  		  	.when('/settings', {
-  		  	  			templateUrl:"views/partials/settings.html",
+  		  	  			templateUrl:"http://dmschrispena.github.io/views/partials/settings.html",
   		  	  			controller: 'partyCtrl'
   		  	  			})
   		  		  	.when('/myTwitter', {
